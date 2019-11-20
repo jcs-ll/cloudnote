@@ -4,7 +4,7 @@ import com.oracle.hrb.cloudnote.entity.NotebookType;
 
 import java.util.List;
 
-public class NotebookTypeDao {
-    NotebookType findNormal();
-    List<NotebookType> findSpecail();
+public abstract class NotebookTypeDao {
+    abstract NotebookType findNormal();
+    abstract List<NotebookType> findSpecial();
 }

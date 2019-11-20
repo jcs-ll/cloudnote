@@ -8,10 +8,10 @@
 </sql>
 
 	<select id="findNormal" resultType="com.oracle.hrb.cloudnote.entity.User">
-		select <include refid="col"/> from cn_user where u_id = #{id}
+		select <include refid="col"/> from cn_notebook_type where t_name = 'normal'
 	</select>
-	<select id="findSpecail" resultType="com.oracle.hrb.cloudnote.entity.User">
-		select <include refid="col"/> from cn_user where u_name = #{name}
+	<select id="findSpecial" resultType="com.oracle.hrb.cloudnote.entity.NotebookType">
+		select <include refid="col"/> from cn_notebook_type where t_name != 'normal'
 	</select>
 
 </mapper>
